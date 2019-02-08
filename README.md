@@ -45,6 +45,14 @@ Enhanced Test Outline
 
 Enhanced Tests
 secret_diary = SecretDiary.new
-secret_diary.locked? = true
+secret_diary.locked? # => true
 secret_diary.add_entry # => Error Message
 secret_diary.get_entry # => Error Message
+secret_diary.unlock
+secret_diary.add_entry
+secret_diary.get_entries
+secret_diary.locked? # => false
+secret_diary.lock
+secret_diary.add_entry # => Error Message
+secret_diary.get_entry # => Error Message
+
