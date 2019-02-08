@@ -28,4 +28,5 @@ Test Outline
 Tests
 secret_diary = SecretDiary.new
 secret_diary.lock
+secret_diary.unlock
 
