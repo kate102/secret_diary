@@ -33,3 +33,10 @@ describe "the get an entry diary method" do
   end
 end
 
+describe "check that a new diary is locked when created" do
+  it "returns true when asked if a new diary is locked" do
+    sd = SecretDiary.new
+    expect(sd.locked?).to eq true
+  end
+end
+

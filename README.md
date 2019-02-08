@@ -12,7 +12,7 @@ When the user calls `unlock`, `add_entry` and `get_entries` should work as desir
 
 When the user calls `lock` again they throw errors again.
 
-Test Outline
+Basic Test Outline
 1. Try to create a secret_diary object in irb
  - this will fail
 2. Move this test to  the spec file
@@ -25,10 +25,24 @@ Test Outline
 	c - enhance the code
 
 
-Tests
+Basic Tests
 secret_diary = SecretDiary.new
 secret_diary.lock
 secret_diary.unlock
 secret_diary.add_entry
-secret_diary.get_entries§
+secret_diary.get_entries
 
+Enhanced Test Outline
+1. the diary is locked when initialized
+2. add_entry should throw an error
+3. get_entry should throw an error
+4. unlock should work
+5. add_entry should work
+6. get_entry should work
+7. lock should work
+8. add_entry should throw an error
+9. get_entry should throw an error
+
+Enhanced Tests
+secret_diary = SecretDiary.new
+secret_diary.locked? = true
