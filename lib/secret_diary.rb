@@ -12,5 +12,9 @@ class SecretDiary
     "Diary now unlocked!"
   end
 
+  def add_entry
+    "Entry Added"
+  end
+
 end
 

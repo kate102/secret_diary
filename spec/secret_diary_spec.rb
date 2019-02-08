@@ -19,3 +19,10 @@ describe "the unlock diary method" do
   end
 end
 
+describe "the add an entry diary method" do
+  it "Has the ability to add an entry" do
+    sd = SecretDiary.new
+    expect(sd.add_entry).to eq "Entry Added"
+  end
+end
+
