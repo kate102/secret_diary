@@ -16,5 +16,9 @@ class SecretDiary
     "Entry Added"
   end
 
+  def get_entry
+    "Entry Retrieved"
+  end
+
 end
 

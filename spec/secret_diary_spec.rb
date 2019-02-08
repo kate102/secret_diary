@@ -26,3 +26,10 @@ describe "the add an entry diary method" do
   end
 end
 
+describe "the get an entry diary method" do
+  it "Has the ability to get an entry" do
+    sd = SecretDiary.new
+    expect(sd.get_entry).to eq "Entry Retrieved"
+  end
+end
+

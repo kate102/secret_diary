@@ -30,4 +30,5 @@ secret_diary = SecretDiary.new
 secret_diary.lock
 secret_diary.unlock
 secret_diary.add_entry
+secret_diary.get_entries§
 
