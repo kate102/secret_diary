@@ -26,7 +26,11 @@ class SecretDiary
   end
 
   def get_entry
-    "Entry Retrieved"
+    if locked?
+      raise ArgumentError, "Sorry diary is locked"
+    else
+      "Entry Retrieved"
+    end
   end
 
   def locked?

@@ -47,3 +47,4 @@ Enhanced Tests
 secret_diary = SecretDiary.new
 secret_diary.locked? = true
 secret_diary.add_entry # => Error Message
+secret_diary.get_entry # => Error Message

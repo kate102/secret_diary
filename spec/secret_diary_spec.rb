@@ -26,12 +26,12 @@ end
 #   end
 # end
 
-describe "the get an entry diary method" do
-  it "Has the ability to get an entry" do
-    sd = SecretDiary.new
-    expect(sd.get_entry).to eq "Entry Retrieved"
-  end
-end
+# describe "the get an entry diary method" do
+#   it "Has the ability to get an entry" do
+#     sd = SecretDiary.new
+#     expect(sd.get_entry).to eq "Entry Retrieved"
+#   end
+# end
 
 describe "check that a new diary is locked when created" do
   it "returns true when asked if a new diary is locked" do
