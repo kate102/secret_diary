@@ -19,12 +19,12 @@ describe "the unlock diary method" do
   end
 end
 
-describe "the add an entry diary method" do
-  it "Has the ability to add an entry" do
-    sd = SecretDiary.new
-    expect(sd.add_entry).to eq "Entry Added"
-  end
-end
+# describe "the add an entry diary method" do
+#   it "Has the ability to add an entry" do
+#     sd = SecretDiary.new
+#     expect(sd.add_entry).to eq "Entry Added"
+#   end
+# end
 
 describe "the get an entry diary method" do
   it "Has the ability to get an entry" do
@@ -37,6 +37,13 @@ describe "check that a new diary is locked when created" do
   it "returns true when asked if a new diary is locked" do
     sd = SecretDiary.new
     expect(sd.locked?).to eq true
+  end
+end
+
+describe "check that a new diary created, you can't add to it because its locked" do
+  it "returns an error when asked to add to a new diary" do
+    sd = SecretDiary.new
+    expect { sd.add_entry}.to raise_error(ArgumentError, "Sorry diary is locked")
   end
 end
 
