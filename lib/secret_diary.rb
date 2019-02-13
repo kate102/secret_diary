@@ -1,7 +1,10 @@
 # This is the Secret Diary Class
 #
+
+require './lib/diary'
 require './lib/lock'
-class SecretDiary
+
+class SecretDiary  < Diary
   attr_writer :locked
 
   def initialize
@@ -33,25 +36,4 @@ class SecretDiary
   end
 end
 
-#class Lock
-#  attr_writer :locked
-#
-#  def initialize
-#    @locked = true
-#  end
-#
-#  def lock
-#    @locked = true
-#    'Lock now locked!'
-#  end
-#
-#  def unlock
-#    @locked = false
-#    'Lock now unlocked!'
-#  end
-#
-#  def locked?
-#    @locked
-#  end
-#
-###end 
+
