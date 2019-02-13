@@ -2,14 +2,17 @@
 #
 class Diary
 
+  attr_accessor :entries
+
   def initialize
+    @entries = []
   end
 
-  def add_entry
-    'Entry Added'
+  def add_entry(text)
+    @entries << text
   end
 
   def retrieve_entries
-    'Entry Retrieved'
+     @entries.first  
   end
 end

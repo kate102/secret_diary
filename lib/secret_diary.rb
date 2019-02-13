@@ -1,4 +1,4 @@
-# This is the Secret Diary Class
+# This is the Secret Diary Class, note that it is a child of the parent class Diary
 #
 
 require './lib/diary'
@@ -13,22 +13,20 @@ class SecretDiary  < Diary
 
   def lock
     @lock.lock
-    'Diary now locked!'
   end
 
   def unlock
     @lock.unlock
-    'Diary now unlocked!'
   end
 
-  def add_entry
+  def add_entry( text = "This is the text")
     fail 'Diary is locked' if locked?
-    'Entry Added'
+    super.add_entry(text)
   end
 
   def retrieve_entries
     fail 'Diary is locked' if locked?
-    'Entry Retrieved'
+    super.add_entry
   end
 
   def locked?

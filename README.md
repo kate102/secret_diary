@@ -59,3 +59,17 @@ secret_diary.get_entry # => Error Message
 ############################## 
 # Now my task is to reorganise into different classes. 
 # I would like a Lock class to not break the tests
+I now have a Lock class and a Diary class
+
+I now want to make sure that it can store and rerieve entries
+1. Can I write a string to the secret diary calling the super class
+2. Can I retrieve this?
+3. Can I write a diary entry with a date
+4. Can I add many diary entries with dates
+5. Can I retrieve an entry by date
+
+diary = Diary.new
+diary.add_entry('text') => ["text"]
+
+diary = Diary.new
+diary.retrieve_entry => ["text"]

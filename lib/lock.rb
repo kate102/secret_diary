@@ -10,12 +10,10 @@ class Lock
 
   def lock
     @locked = true
-    'Lock now locked!'
   end
 
   def unlock
     @locked = false
-    'Lock now unlocked!'
   end
 
   def locked?
