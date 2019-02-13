@@ -1,49 +1,50 @@
 require './lib/secret_diary.rb'
 
-# describe SecretDiary do
+describe SecretDiary do
+  # let (:lock) { double(:lock) }
 
-# Arrange
-secret_diary = SecretDiary.new
-
-describe "the lock diary method" do
-  it "Has the ability to lock" do
-    sd = SecretDiary.new
-    expect(sd.lock).to eq "Diary now locked!"
+  describe 'the lock diary method' do
+    it 'Has the ability to lock' do
+      expect(subject.lock).to eq 'Diary now locked!'
+    end
   end
-end
 
-describe "the unlock diary method" do
-  it "Has the ability to unlock" do
-    sd = SecretDiary.new
-    expect(sd.unlock).to eq "Diary now unlocked!"
+  describe 'the unlock diary method' do
+    it 'Has the ability to unlock' do
+      expect(subject.unlock).to eq 'Diary now unlocked!'
+    end
   end
-end
 
-# describe "the add an entry diary method" do
-#   it "Has the ability to add an entry" do
+# describe 'the add an entry diary method' do
+#   it 'Has the ability to add an entry' do
 #     sd = SecretDiary.new
-#     expect(sd.add_entry).to eq "Entry Added"
+#     expect(subject.add_entry).to eq 'Entry Added'
 #   end
 # end
 
-# describe "the get an entry diary method" do
-#   it "Has the ability to get an entry" do
+# describe 'the retrieve an entry diary method' do
+#   it 'Has the ability to retrieve an entry' do
 #     sd = SecretDiary.new
-#     expect(sd.get_entry).to eq "Entry Retrieved"
+#     expect(subject.retrieve_entry).to eq 'Entry Retrieved'
 #   end
 # end
 
-describe "check that a new diary is locked when created" do
-  it "returns true when asked if a new diary is locked" do
-    sd = SecretDiary.new
-    expect(sd.locked?).to eq true
+  describe 'check that a new diary is locked when created' do
+    it 'returns true when asked if a new diary is locked' do
+      expect(subject.locked?).to eq true
+    end
+  end
+
+  describe 'you can not add diary it because its locked' do
+    it 'returns an error when asked to add to a new diary' do
+      expect{ subject.add_entry }. to raise_error 'Diary is locked'
+    end
+  end
+
+  describe 'you can not retrieve an entry it because its locked' do
+    it 'returns an error when asked to retrieve from a locked diary' do
+      subject.lock
+      expect{ subject.retrieve_entries }. to raise_error 'Diary is locked'
+    end
   end
 end
-
-describe "check that a new diary created, you can't add to it because its locked" do
-  it "returns an error when asked to add to a new diary" do
-    sd = SecretDiary.new
-    expect { sd.add_entry}.to raise_error(ArgumentError, "Sorry diary is locked")
-  end
-end
-

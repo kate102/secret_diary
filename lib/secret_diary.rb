@@ -1,41 +1,33 @@
+# This is the Secret Diary Class
+#
 class SecretDiary
-
-  @locked
+  attr_writer :locked
 
   def initialize
-    p "Creating secret diary"
     @locked = true
   end
 
   def lock
     @locked = true
-    "Diary now locked!"
+    'Diary now locked!'
   end
 
   def unlock
     @locked = false
-    "Diary now unlocked!"
+    'Diary now unlocked!'
   end
 
   def add_entry
-    if locked?
-      raise ArgumentError, "Sorry diary is locked"
-    else
-      "Entry Added"
-    end
+    fail 'Diary is locked' if locked?
+    'Entry Added'
   end
 
-  def get_entries
-    if locked?
-      raise ArgumentError, "Sorry diary is locked"
-    else
-      "Entry Retrieved"
-    end
+  def retrieve_entries
+    fail 'Diary is locked' if locked?
+    'Entry Retrieved'
   end
 
   def locked?
     @locked
   end
-
 end
-
