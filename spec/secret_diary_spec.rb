@@ -5,13 +5,16 @@ describe SecretDiary do
 
   describe 'the lock diary method' do
     it 'Has the ability to lock' do
-      expect(subject.lock).to eq 'Diary now locked!'
+      d = SecretDiary.new
+      d.unlock
+      expect{ d.lock }.to change{ d.locked? }.to true
     end
   end
 
   describe 'the unlock diary method' do
     it 'Has the ability to unlock' do
-      expect(subject.unlock).to eq 'Diary now unlocked!'
+      d = SecretDiary.new
+      expect{ d.unlock }.to change{ d.locked? }.to false
     end
   end
 
@@ -37,7 +40,8 @@ describe SecretDiary do
 
   describe 'you can not add diary it because its locked' do
     it 'returns an error when asked to add to a new diary' do
-      expect{ subject.add_entry }. to raise_error 'Diary is locked'
+      d = SecretDiary.new
+      expect{ d.add_entry }. to raise_error 'Diary is locked'
     end
   end
 

@@ -56,3 +56,6 @@ secret_diary.lock
 secret_diary.add_entry # => Error Message
 secret_diary.get_entry # => Error Message
 
+############################## 
+# Now my task is to reorganise into different classes. 
+# I would like a Lock class to not break the tests
