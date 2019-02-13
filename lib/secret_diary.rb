@@ -1,6 +1,6 @@
 # This is the Secret Diary Class
 #
-# require './lib/lock'
+require './lib/lock'
 class SecretDiary
   attr_writer :locked
 
@@ -33,25 +33,25 @@ class SecretDiary
   end
 end
 
-class Lock
-  attr_writer :locked
-
-  def initialize
-    @locked = true
-  end
-
-  def lock
-    @locked = true
-    'Lock now locked!'
-  end
-
-  def unlock
-    @locked = false
-    'Lock now unlocked!'
-  end
-
-  def locked?
-    @locked
-  end
-
-end 
+#class Lock
+#  attr_writer :locked
+#
+#  def initialize
+#    @locked = true
+#  end
+#
+#  def lock
+#    @locked = true
+#    'Lock now locked!'
+#  end
+#
+#  def unlock
+#    @locked = false
+#    'Lock now unlocked!'
+#  end
+#
+#  def locked?
+#    @locked
+#  end
+#
+###end 
