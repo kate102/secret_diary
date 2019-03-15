@@ -13,17 +13,17 @@ SecretDiary
   - add_entry
   - get_entries
 
-# Initially the `SecretDiary` class is locked, meaning `add_entry` and `get_entries` should throw an error.
-# When the user calls `unlock`, `add_entry` and `get_entries` should work as desired.
-# When the user calls `lock` again they throw errors again.
+Initially the `SecretDiary` class is locked, meaning `add_entry` and `get_entries` should throw an error.
+When the user calls `unlock`, `add_entry` and `get_entries` should work as desired.
+When the user calls `lock` again they throw errors again.
 
 # Basic Test Outline
 1. Try to create a secret_diary object in irb
- - this will fail
+   this will fail
 2. Move this test to  the spec file
- - this will fail rspec
+   this will fail rspec
 3. Create a basic object in .rb file
- - this should succeed
+   this should succeed
 4. for each of the functions in turn 
 	a - try to invoke in irb
 	b - try to invoke using rspec
@@ -60,10 +60,10 @@ secret_diary.lock
 secret_diary.add_entry # => Error Message
 secret_diary.get_entry # => Error Message
 
-############################## 
-# Now my task is to reorganise into different classes. 
-# I would like a Lock class to not break the tests
-# I now have a Lock class and a Diary class and the Secret Diary is a child of the Diary class
+ 
+# Now my task is to reorganise into different classes.  
+I would like a Lock class to not break the tests
+I now have a Lock class and a Diary class and the Secret Diary is a child of the Diary class
 
 I now want to make sure that it can store and rerieve entries
 1. Can I write a string to the secret diary calling the super class
@@ -71,9 +71,3 @@ I now want to make sure that it can store and rerieve entries
 3. Can I write a diary entry with a date
 4. Can I add many diary entries with dates
 5. Can I retrieve an entry by date
-
-diary = Diary.new
-diary.add_entry('text') => ["text"]
-
-diary = Diary.new
-diary.retrieve_entry => ["text"]
