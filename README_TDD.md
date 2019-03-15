@@ -1,12 +1,12 @@
-############################################################################################################################
-## This challenge is to take a simple Secret Diary class description and implement it using Test Driven Development methods.
-## The functionality neatly follows a path of collections of functional enhancements.
-## Each of these are broken down in to 'fail-able' isolated steps, the irb test is documented below for each of these.
-## Once a test fails in irb, the spec file is updated with that test. 
-## Where possible I have tested for behavior rather than state.
-## 
 
-# The basic secret diary has the following functions
+# This challenge is to take a simple Secret Diary class description and implement it using Test Driven Development methods.
+ The functionality neatly follows a path of collections of functional enhancements.
+ Each of these are broken down in to 'fail-able' isolated steps, the irb test is documented below for each of these.
+ Once a test fails in irb, the spec file is updated with that test. 
+ Where possible I have tested for behavior rather than state.
+ 
+
+## The basic secret diary has the following functions
 SecretDiary
   - lock
   - unlock
