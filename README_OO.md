@@ -1,6 +1,6 @@
-####################################################################################
-# The object of this README file is to explain the concepts of Object Orientaited
-# Programming that we have been given as our course objectived in weeks 1 and 2
+
+# The object of this README file is to explain the concepts of Object Orientaited Programming
+These were the course objectives in weeks 1 and 2
 
 - Polymorphism
 This seems to be a fundamental requirement, broadly it means that objects (or instances of) can send the same message to 
